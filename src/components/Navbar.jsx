@@ -149,15 +149,12 @@ function NavbarComponent({ toggleTheme, isDarkMode }) {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  // ✅ Fix horizontal overflow issue
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
     } else {
       document.body.style.overflow = "auto";
     }
-
-    // ✅ Fix black bar issue on initial load
     document.documentElement.style.overflowX = "hidden";
   }, [isMenuOpen]);
 
@@ -166,28 +163,92 @@ function NavbarComponent({ toggleTheme, isDarkMode }) {
       <Navbar $isMenuOpen={isMenuOpen}>
         <div className="logo">NV</div>
         <div className="nav-links">
-          <Link to="home" smooth duration={100} className="nav-item">
+          <Link
+            to="home"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Home
           </Link>
-          <Link to="about" smooth duration={100} className="nav-item">
+          <Link
+            to="about"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             About Me
           </Link>
-          <Link to="skills" smooth duration={100} className="nav-item">
+          <Link
+            to="skills"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Skills
           </Link>
-          <Link to="experience" smooth duration={100} className="nav-item">
+          <Link
+            to="experience"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Experience
           </Link>
-          <Link to="education" smooth duration={100} className="nav-item">
+          <Link
+            to="education"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Education
           </Link>
-          <Link to="projects" smooth duration={100} className="nav-item">
+          <Link
+            to="projects"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Projects
           </Link>
-          <Link to="achievements" smooth duration={100} className="nav-item">
+          <Link
+            to="achievements"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-70}
+            activeClass="active"
+            className="nav-item"
+          >
             Achievements
           </Link>
-          <Link to="contact" smooth duration={100} className="nav-item">
+          <Link
+            to="contact"
+            smooth
+            duration={100}
+            spy={true}
+            offset={-20}
+            activeClass="active"
+            className="nav-item"
+          >
             Contact
           </Link>
         </div>

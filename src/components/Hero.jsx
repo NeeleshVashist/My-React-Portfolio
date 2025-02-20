@@ -109,6 +109,51 @@ const SkillBadge = styled(motion.div)`
   }
 `;
 
+const ContactButton = styled.button`
+  background-color: transparent;
+  border: 2px solid ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.accent};
+  padding: 0.9rem 4rem;
+  margin: 3rem 0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: ${({ theme }) => theme.glassBg};
+    color: ${({ theme }) => theme.accent};
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.2;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.accent};
+    box-shadow: 0 0 20px ${({ theme }) => theme.accentColor},
+      0 0 30px ${({ theme }) => theme.accentColor};
+    transform: scale(1.1);
+  }
+
+  &:hover::before {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+`;
+
 const Hero = () => {
   const skills = [
     "React",
@@ -148,7 +193,6 @@ const Hero = () => {
               />
             </motion.div>
           </SectionHeader>
-
           <Description
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -159,7 +203,6 @@ const Hero = () => {
             love combining data, design, and technology to create impactful
             solutions.
           </Description>
-
           <SkillsContainer>
             {skills.map((skill, index) => (
               <SkillBadge key={index} whileHover={{ scale: 1 }}>
@@ -167,6 +210,15 @@ const Hero = () => {
               </SkillBadge>
             ))}
           </SkillsContainer>
+          <ContactButton
+            onClick={() =>
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Contact Me
+          </ContactButton>{" "}
         </Content>
 
         {/* Profile Image (Bigger & on the Right) */}
