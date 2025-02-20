@@ -136,12 +136,13 @@ const Hero = () => {
                     .typeString("Hey there, I'm Neelesh")
                     .pauseFor(1000)
                     .deleteChars(7)
-                    .pauseFor(1000)
                     .typeString("a Developer")
                     .pauseFor(1000)
                     .deleteChars(11)
                     .typeString("an Engineer")
                     .pauseFor(1000)
+                    .deleteChars(11)
+                    .typeString("Neelesh Vashist")
                     .start();
                 }}
               />
