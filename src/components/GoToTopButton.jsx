@@ -30,6 +30,15 @@ const Button = styled.button`
     transform: translateY(-2px);
     box-shadow: ${({ theme }) => theme.hover_boxShadow};
   }
+
+  @media (max-width: 768px) {
+    background: ${({ theme }) => theme.glassBg};
+    color: ${({ theme }) => theme.accent};
+    border: 2px solid ${({ theme }) => theme.accent};
+    backdrop-filter: blur(1px);
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const GoToTopButton = () => {
