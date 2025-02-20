@@ -6,7 +6,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import profilePic from "../assets/profile.jpg"; // Update with your actual image path
+import { profilePic } from "../assets/images"; // Update with your actual image path
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -178,7 +178,7 @@ const Hero = () => {
             easing={0.1}
             resetOnLeave
           >
-            <MouseParallaxChild factorX={0.5} factorY={0.5}>
+            <MouseParallaxChild factorX={0.08} factorY={0.08}>
               <ProfileImage src={profilePic} alt="Neelesh Vashist" />
             </MouseParallaxChild>
           </MouseParallaxContainer>
