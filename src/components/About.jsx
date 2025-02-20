@@ -111,12 +111,10 @@ const About = () => {
           animate={controls}
           transition={{ duration: 1 }}
         >
-          Hi, I’m <HighlightedText>Neelesh</HighlightedText>, a
-          <HighlightedText> Data Scientist </HighlightedText> passionate about
-          <HighlightedText>
-            {" "}
-            AI, Machine Learning, and Tech Innovation.
-          </HighlightedText>
+          Hi, I’m <HighlightedText>Neelesh</HighlightedText>, a Data Scientist
+          passionate about <HighlightedText>AI</HighlightedText>,
+          <HighlightedText> Machine Learning</HighlightedText>, and Tech
+          Innovation.
         </AboutText>
 
         <AboutText
@@ -124,11 +122,10 @@ const About = () => {
           animate={controls}
           transition={{ duration: 1 }}
         >
-          My journey began with a simple curiosity: how can{" "}
-          <HighlightedText>data shape the world?</HighlightedText>
-          Over time, that curiosity evolved into an obsession with{" "}
-          <HighlightedText>building intelligent models</HighlightedText>
-          that solve real-world problems.
+          My journey started with a simple question:
+          <HighlightedText> How can data shape the world? </HighlightedText>
+          What began as curiosity soon evolved into a deep passion for solving
+          complex problems with intelligent models.
         </AboutText>
 
         <AboutText
@@ -136,10 +133,11 @@ const About = () => {
           animate={controls}
           transition={{ duration: 1 }}
         >
-          Today, I specialize in crafting{" "}
-          <HighlightedText>predictive algorithms</HighlightedText>, fine-tuning
-          <HighlightedText> AI models</HighlightedText>, and translating complex
-          data into <HighlightedText>actionable insights</HighlightedText>.
+          Today, I specialize in building
+          <HighlightedText> predictive algorithms</HighlightedText>, fine tuning
+          <HighlightedText> AI models</HighlightedText> and
+          <HighlightedText> deep learning models</HighlightedText>, and
+          transforming raw data into meaningful insights.
         </AboutText>
 
         <AboutText
@@ -147,13 +145,13 @@ const About = () => {
           animate={controls}
           transition={{ duration: 1 }}
         >
-          I believe in <HighlightedText>continuous learning</HighlightedText>{" "}
-          and thrive on challenges that push my skills forward. Whether
-          it&apos;s working with <HighlightedText>big data</HighlightedText>,
-          optimizing <HighlightedText>deep learning models</HighlightedText>, or
-          exploring <HighlightedText>cutting-edge technologies</HighlightedText>
-          , my goal is to create{" "}
-          <HighlightedText>impactful solutions</HighlightedText>.
+          I thrive on <HighlightedText>continuous learning </HighlightedText>
+          and <HighlightedText> challenges</HighlightedText> that push my
+          limits. Whether it’s working with
+          <HighlightedText> big data</HighlightedText>, refining
+          state-of-the-art AI models, or exploring
+          <HighlightedText> cutting-edge technologies</HighlightedText>, my goal
+          is to build innovative solutions that create real impact.
         </AboutText>
       </AboutContainer>
     </AboutSection>
