@@ -6,7 +6,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import { profilePic } from "../assets/images"; // Update with your actual image path
+import { profilePic } from "../assets/images/profile-pic"; // Update with your actual image path
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -68,7 +68,7 @@ const ProfileImage = styled.img`
 `;
 
 const Description = styled(motion.p)`
-  font-size: 1.3rem; /* Slightly larger text */
+  font-size: 1.1rem;
   opacity: 0.8;
   line-height: 1.7;
 

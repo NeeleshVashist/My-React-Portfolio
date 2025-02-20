@@ -22,6 +22,7 @@ const Button = styled.button`
   transition: all 0.3s ease;
   opacity: ${(props) => (props.$visible ? 1 : 0)};
   visibility: ${(props) => (props.$visible ? "visible" : "hidden")};
+  z-index: 9999;
 
   &:hover {
     background: ${({ theme }) => theme.button_hover_bg};
