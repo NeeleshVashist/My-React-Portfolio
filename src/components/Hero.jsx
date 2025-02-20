@@ -6,7 +6,7 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import profilePic from "../assets/profile.jpeg"; // Update with your actual image path
+import profilePic from "../assets/profile.jpg"; // Update with your actual image path
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -27,7 +27,7 @@ const HeroSection = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Push content & image apart */
+  justify-content: space-between;
   gap: 3rem;
   max-width: 1200px;
   width: 100%;
@@ -171,25 +171,15 @@ const Hero = () => {
         {/* Profile Image (Bigger & on the Right) */}
         <ProfileImageContainer>
           <MouseParallaxContainer
-            globalFactorX={0.1}
-            globalFactorY={0.1}
+            height={200}
+            width={200}
+            z-index={10}
+            globalFactor={0.1}
+            easing={0.1}
             resetOnLeave
           >
-            <MouseParallaxChild factorX={0.08} factorY={0.08}>
-              <ProfileImageContainer>
-                <MouseParallaxContainer
-                  height={200}
-                  width={200}
-                  z-index={10}
-                  globalFactor={0.1}
-                  easing={0.1}
-                  resetOnLeave
-                >
-                  <MouseParallaxChild factorX={0.08} factorY={0.08}>
-                    <ProfileImage src={profilePic} alt="Neelesh Vashist" />
-                  </MouseParallaxChild>
-                </MouseParallaxContainer>
-              </ProfileImageContainer>
+            <MouseParallaxChild factorX={0.5} factorY={0.5}>
+              <ProfileImage src={profilePic} alt="Neelesh Vashist" />
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </ProfileImageContainer>
