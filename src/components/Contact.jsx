@@ -102,6 +102,32 @@ const SocialIcon = styled.a`
   }
 `;
 
+const DownloadResumeButton = styled.a`
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: ${({ theme }) => theme.button_bg};
+  color: ${({ theme }) => theme.button_text};
+  border: 2px solid ${({ theme }) => theme.button_border};
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: ${({ theme }) => theme.button_hover_bg};
+    box-shadow: ${({ theme }) => theme.hover_boxShadow};
+    color: ${({ theme }) => theme.button_hover_text};
+    border-color: ${({ theme }) => theme.button_hover_border};
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+`;
+
 // Right Side (Contact Form)
 const ContactRight = styled.div`
   flex: 1;
@@ -259,6 +285,14 @@ const Contact = () => {
               <FaEnvelope />
             </SocialIcon>
           </SocialLinks>
+
+          {/* Download Resume Button */}
+          <DownloadResumeButton
+            href="#" // Add your resume file path here
+            download
+          >
+            Download Resume
+          </DownloadResumeButton>
         </ContactLeft>
 
         {/* Divider */}
