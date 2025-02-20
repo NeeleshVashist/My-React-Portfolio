@@ -109,7 +109,7 @@ const About = () => {
         <AboutText
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 1 }}
         >
           Hi, I’m <HighlightedText>Neelesh</HighlightedText>, a
           <HighlightedText> Data Scientist </HighlightedText> passionate about
@@ -122,7 +122,7 @@ const About = () => {
         <AboutText
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          transition={{ duration: 1, delay: 0.4 }}
+          transition={{ duration: 1 }}
         >
           My journey began with a simple curiosity: how can{" "}
           <HighlightedText>data shape the world?</HighlightedText>
@@ -134,7 +134,7 @@ const About = () => {
         <AboutText
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ duration: 1 }}
         >
           Today, I specialize in crafting{" "}
           <HighlightedText>predictive algorithms</HighlightedText>, fine-tuning
@@ -145,7 +145,7 @@ const About = () => {
         <AboutText
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1 }}
         >
           I believe in <HighlightedText>continuous learning</HighlightedText>{" "}
           and thrive on challenges that push my skills forward. Whether

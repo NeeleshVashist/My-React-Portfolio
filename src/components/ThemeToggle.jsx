@@ -13,7 +13,6 @@ const ToggleButton = styled.button`
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  z-index: 9999;
 
   &:hover {
     background: ${({ theme }) => theme.text};
