@@ -38,7 +38,7 @@ const SkillsSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 10%;
+  padding: 5rem 5%; /* Reduced padding */
   overflow: hidden;
   width: 100%;
 `;
@@ -71,8 +71,15 @@ const SkillCard = styled(motion.div)`
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 150px;
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   box-shadow: ${({ theme }) => theme.box_shadow};
+  // margin: auto; /* Centers each card */
+
+  @media (max-width: 480px) {
+    height: 150px;
+    max-width: 150px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -127,13 +134,25 @@ const skills = [
 
 // Responsive Grid
 const SkillsContainerResponsive = styled(SkillsContainer)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the skill cards properly */
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  // overflow: hidden;
+
   @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 2.3rem;
-  }
-  @media (max-width: 480px) {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 3rem;
+    gap: 1.5rem;
+    padding: 0 5%;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); /* Forces 2 columns to fit */
+    gap: 1.5rem;
+    padding: 0 5%;
   }
 `;
 
